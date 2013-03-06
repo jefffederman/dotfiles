@@ -40,6 +40,7 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOM
 
 alias mvim="nocorrect mvim"
 alias gphm="git push heroku master"
+alias bx="bundle exec"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
