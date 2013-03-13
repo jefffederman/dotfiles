@@ -14,7 +14,9 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'SirVer/ultisnips'        
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'tpope/vim-fugitive'
 
+set number
 set modelines=0
 set background=dark
 set autoindent
