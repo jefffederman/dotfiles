@@ -1,0 +1,15 @@
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+
+[color]
+  ui = true
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
+[user]
+	name = Jeff Federman
+	email = jefffederman@gmail.com

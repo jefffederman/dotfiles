@@ -2,3 +2,7 @@
 
 fontName = "Menlo"
 fontSize = 14
+
+excludeInFileChooser = "{$excludeInFileChooser,log,vendor,tmp}"
+excludeInBrowser = "{$excludeInBrowser,log,vendor,tmp}"
+excludeInFolderSearch = "{$excludeInFolderSearch,log,vendor,tmp}"
