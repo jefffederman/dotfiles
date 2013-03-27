@@ -3,6 +3,6 @@
 fontName = "Menlo"
 fontSize = 14
 
-excludeInFileChooser = "{$excludeInFileChooser,log,vendor,tmp}"
-excludeInBrowser = "{$excludeInBrowser,log,vendor,tmp}"
-excludeInFolderSearch = "{$excludeInFolderSearch,log,vendor,tmp}"
+excludeInFileChooser = "{$excludeInFileChooser,log,tmp}"
+excludeInBrowser = "{$excludeInBrowser,log,tmp}"
+excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp}"
