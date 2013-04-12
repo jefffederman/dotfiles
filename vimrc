@@ -15,6 +15,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'SirVer/ultisnips'        
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-fugitive'
+Bundle 'thoughtbot/vim-rspec'
 
 set number
 set modelines=0
@@ -63,3 +64,8 @@ let g:ycm_key_list_select_completion=['<c-j>','<Down>']
 let g:UltiSnipsExpandTrigger="<tab>" 
 let g:UltiSnipsJumpForwardTrigger="<tab>" 
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
