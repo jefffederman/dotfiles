@@ -6,3 +6,6 @@ fontSize = 14
 excludeInFileChooser = "{$excludeInFileChooser,log,tmp}"
 excludeInBrowser = "{$excludeInBrowser,log,tmp}"
 excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp}"
+
+[ "*_spec.rb" ]
+fileType = 'source.ruby.rspec'
