@@ -69,3 +69,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
+
+" Powerline
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
