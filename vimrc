@@ -12,8 +12,8 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'SirVer/ultisnips'        
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'SirVer/ultisnips'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
 
@@ -60,9 +60,9 @@ set guifont=Menlo:h14
 let g:sparkupNextMapping = '<c-x>'
 
 " Get YouCompleteMe and UltiSnips to play nice
-let g:ycm_key_list_select_completion=['<c-j>','<Down>']  
-let g:UltiSnipsExpandTrigger="<tab>" 
-let g:UltiSnipsJumpForwardTrigger="<tab>" 
+let g:ycm_key_list_select_completion=['<c-j>','<Down>']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Rspec.vim mappings
