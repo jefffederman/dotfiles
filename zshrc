@@ -40,9 +40,11 @@ export NODE_PATH=$HOME/node_modules
 export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin
 
 alias mvim="nocorrect mvim"
+alias python3="nocorrect python3"
 alias gphm="git push heroku master"
 alias bx="bundle exec"
 alias fr="foreman run"
+alias frbx="foreman run bundle exec"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
