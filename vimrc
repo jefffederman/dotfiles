@@ -19,7 +19,6 @@ Bundle 'thoughtbot/vim-rspec'
 
 set number
 set modelines=0
-set background=dark
 set autoindent
 set smartindent
 set smarttab
