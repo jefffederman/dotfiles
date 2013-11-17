@@ -55,8 +55,9 @@ nmap k gk
 set foldmethod=indent
 set nofoldenable "Don't fold by default
 filetype indent plugin on
-colorscheme molokai
-set guifont=Menlo:h14
+colorscheme solarized
+set background=dark
+set guifont=Menlo:h16
 let g:sparkupNextMapping = '<c-x>'
 
 " Get YouCompleteMe and UltiSnips to play nice

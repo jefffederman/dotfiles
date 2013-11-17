@@ -45,6 +45,7 @@ alias gphm="git push heroku master"
 alias bx="bundle exec"
 alias fr="foreman run"
 alias frbx="foreman run bundle exec"
+alias bower="noglob bower"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
