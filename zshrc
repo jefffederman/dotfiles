@@ -38,6 +38,7 @@ source $ZSH/oh-my-zsh.sh
 # Must start first path export with $PATH for RVM to work properly, per https://github.com/wayneeseguin/rvm/issues/1351#issuecomment-10939525
 export NODE_PATH=$HOME/node_modules
 export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin
+export EDITOR=m2
 
 alias mvim="nocorrect mvim"
 alias python3="nocorrect python3"
