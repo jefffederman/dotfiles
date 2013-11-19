@@ -12,11 +12,13 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdcommenter'
-" Bundle 'SirVer/ultisnips'
+Bundle 'SirVer/ultisnips'
 " Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
 
+set splitbelow
+set splitright
 set number
 set modelines=0
 set autoindent
@@ -60,7 +62,7 @@ set guifont=Menlo:h16
 let g:sparkupNextMapping = '<c-x>'
 
 " Get YouCompleteMe and UltiSnips to play nice
-let g:ycm_key_list_select_completion=['<c-j>','<Down>']
+" let g:ycm_key_list_select_completion=['<c-j>','<Down>']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
@@ -72,3 +74,7 @@ map <Leader>l :call RunLastSpec()<CR>
 
 " Powerline
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+
+" Window splits
+map :sp :split
+map :vsp :vsplit
