@@ -47,6 +47,7 @@ alias bx="bundle exec"
 alias fr="foreman run"
 alias frbx="foreman run bundle exec"
 alias bower="noglob bower"
+alias cl="clear"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
