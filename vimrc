@@ -13,9 +13,11 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'SirVer/ultisnips'
-" Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'mustache/vim-mustache-handlebars'
 
 set splitbelow
 set splitright
@@ -61,11 +63,11 @@ set background=dark
 set guifont=Menlo:h16
 let g:sparkupNextMapping = '<c-x>'
 
-" Get YouCompleteMe and UltiSnips to play nice
-" let g:ycm_key_list_select_completion=['<c-j>','<Down>']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:mustache_abbreviations = 1
 
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>

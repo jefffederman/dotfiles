@@ -3,6 +3,11 @@
   ci = commit
   br = branch
   co = checkout
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+  ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  la = "!git config -l | grep alias | cut -c 7-"
 
 [color]
   ui = true
@@ -13,3 +18,8 @@
 [user]
 	name = Jeff Federman
 	email = jefffederman@gmail.com
+[core]
+  excludesfile = /Users/jefffederman/.gitignore
+[heroku]
+  account = personal
+  
