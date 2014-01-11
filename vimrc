@@ -18,6 +18,7 @@ Bundle 'thoughtbot/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'vim-scripts/DeleteTrailingWhitespace'
 
 set splitbelow
 set splitright
