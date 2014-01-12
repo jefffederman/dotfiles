@@ -19,6 +19,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'vim-scripts/DeleteTrailingWhitespace'
+Bundle 'bling/vim-airline'
+Bundle 'edkolev/tmuxline.vim'
 
 set splitbelow
 set splitright
@@ -62,6 +64,7 @@ filetype indent plugin on
 colorscheme solarized
 set background=dark
 set guifont=Menlo:h16
+let g:airline_powerline_fonts = 1
 let g:sparkupNextMapping = '<c-x>'
 
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -74,9 +77,6 @@ let g:mustache_abbreviations = 1
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
-
-" Powerline
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 
 " Window splits
 map :sp :split
