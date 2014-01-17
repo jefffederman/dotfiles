@@ -63,7 +63,7 @@ set nofoldenable "Don't fold by default
 filetype indent plugin on
 colorscheme solarized
 set background=dark
-set guifont=Menlo:h16
+set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
 let g:sparkupNextMapping = '<c-x>'
 
