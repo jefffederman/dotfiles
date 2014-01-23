@@ -61,7 +61,8 @@ nmap k gk
 set foldmethod=indent
 set nofoldenable "Don't fold by default
 filetype indent plugin on
-colorscheme solarized
+set t_Co=256
+colorscheme herald
 set background=dark
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
