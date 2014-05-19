@@ -54,6 +54,7 @@ alias bower="noglob bower"
 alias cle="clear"
 alias m2="mate"
 
+export GOPATH="$HOME/Code/golang"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 

@@ -4,7 +4,7 @@ fontName = "Menlo"
 fontSize = 16
 
 excludeInFileChooser = "{$excludeInFileChooser,log,tmp}"
-excludeInBrowser = "{$excludeInBrowser,log,tmp}"
+# excludeInBrowser = "{$excludeInBrowser,log,tmp}"
 excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp}"
 
 [ "*_spec.rb" ]

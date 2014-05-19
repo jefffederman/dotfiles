@@ -1,7 +1,7 @@
 syntax on
+filetype indent plugin on
 let mapleader=" "
 set nocompatible
-filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -21,6 +21,7 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'vim-scripts/DeleteTrailingWhitespace'
 Bundle 'bling/vim-airline'
 Bundle 'edkolev/tmuxline.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 set splitbelow
 set splitright
@@ -60,9 +61,8 @@ nmap j gj
 nmap k gk
 set foldmethod=indent
 set nofoldenable "Don't fold by default
-filetype indent plugin on
 set t_Co=256
-colorscheme herald
+colorscheme solarized
 set background=dark
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
