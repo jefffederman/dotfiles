@@ -53,6 +53,7 @@ alias frbx="foreman run bundle exec"
 alias bower="noglob bower"
 alias cle="clear"
 alias m2="mate"
+alias woofly_api="cd $HOME/Dropbox/Alice_Lam/Woofly/API/woofly_api"
 
 export GOPATH="$HOME/Code/golang"
 ### Added by the Heroku Toolbelt
