@@ -1,27 +1,34 @@
-syntax on
-filetype indent plugin on
-let mapleader=" "
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
 set nocompatible
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 " My bundles here:
 "
 " Original Github repos:
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'SirVer/ultisnips'
-Bundle 'tpope/vim-fugitive'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'vim-scripts/DeleteTrailingWhitespace'
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'SirVer/ultisnips'
+Plugin 'tpope/vim-fugitive'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'vim-scripts/DeleteTrailingWhitespace'
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'jnwhiteh/vim-golang'
+
+call vundle#end()
+
+syntax on
+filetype indent plugin on
+let mapleader=" "
 
 set splitbelow
 set splitright
@@ -82,3 +89,6 @@ map <Leader>l :call RunLastSpec()<CR>
 " Window splits
 map :sp :split
 map :vsp :vsplit
+
+" Go
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
