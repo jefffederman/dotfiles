@@ -34,3 +34,6 @@
 [submodule "vim/bundle/DeleteTrailingWhitespace"]
 	path = vim/bundle/DeleteTrailingWhitespace
 	url = https://github.com/vim-scripts/DeleteTrailingWhitespace.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
