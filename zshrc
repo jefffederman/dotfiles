@@ -10,7 +10,6 @@ ZSH_THEME="jfederman"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias rvm-prompt=$HOME/.rvm/bin/rvm-prompt
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -34,14 +33,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-function pair {
-  ruby ~/Code/Simon_and_Schuster/devtools/pair.rb $*
-}
-
 # Customize to your needs...
-# Must start first path export with $PATH for RVM to work properly, per https://github.com/wayneeseguin/rvm/issues/1351#issuecomment-10939525
 export NODE_PATH=$HOME/node_modules
-export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin
 export EDITOR=mate
 
 alias mvim="nocorrect mvim"
@@ -51,7 +45,6 @@ alias bx="bundle exec"
 alias fr="foreman run"
 alias frbx="foreman run bundle exec"
 alias bower="noglob bower"
-alias cle="clear"
 alias m2="mate"
 alias woofly_api="cd $HOME/Dropbox/Alice_Lam/Woofly/API/woofly_api"
 
@@ -59,7 +52,4 @@ export GOPATH="$HOME/Code/golang"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# To allow RVM to display in prompt – http://stackoverflow.com/questions/6636066/zsh-rvm-woes-rvm-prompt-doesnt-resolve
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
