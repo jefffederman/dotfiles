@@ -3,6 +3,7 @@ local return_code="%(?..%{$fg[green]%}%? ↵%{$reset_color%})"
 
 local user_host='%{$terminfo[bold]$fg[black]%}%n%{$reset_color%}'
 local current_dir='%{$terminfo[bold]$fg[green]%} %~%{$reset_color%}'
+# 2014-07-18 rvm_ruby not displaying as is...
 local rvm_ruby=''
 if which rvm-prompt &> /dev/null; then
   rvm_ruby='%{$fg[black]%}$(~/.rvm/bin/rvm-prompt i v g)%{$reset_color%}'
