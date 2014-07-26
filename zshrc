@@ -1,3 +1,8 @@
+# From chruby install instructions
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby ruby 2.1.2
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -16,7 +21,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export NODE_PATH=$HOME/node_modules
-export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin
 export EDITOR=mate
 
 alias mvim="nocorrect mvim"
@@ -32,5 +37,3 @@ alias woofly_api="cd $HOME/Dropbox/Alice_Lam/Woofly/API/woofly_api"
 export GOPATH="$HOME/Code/golang"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
