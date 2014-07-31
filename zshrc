@@ -22,7 +22,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export NODE_PATH=$HOME/node_modules
 export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin
-export EDITOR=mate
 
 alias mvim="nocorrect mvim"
 alias python3="nocorrect python3"
@@ -33,6 +32,7 @@ alias frbx="foreman run bundle exec"
 alias bower="noglob bower"
 alias m2="mate"
 alias woofly_api="cd $HOME/Dropbox/Alice_Lam/Woofly/API/woofly_api"
+alias fgbp="cd $HOME/Code/Funding_Gates/Business-Portal"
 
 export GOPATH="$HOME/Code/golang"
 ### Added by the Heroku Toolbelt
