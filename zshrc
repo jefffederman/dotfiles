@@ -22,6 +22,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export NODE_PATH=$HOME/node_modules
 export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin
+export EDITOR=vim
 
 alias mvim="nocorrect mvim"
 alias python3="nocorrect python3"
