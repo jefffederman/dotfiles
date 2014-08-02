@@ -13,12 +13,15 @@
 			* Bundler
 			* Rails	
 	* node
+    	* bower
+    	* browserify
 	* Python 2 & 3
 		* virtualenv
-	* The Silver Searcher
-	* tree
-	* wget
-	* zsh
+  * Go  
+  * The Silver Searcher
+  * tree
+  * wget
+  * zsh
 * Textmate 2
 * iTerm2
 * Mou
