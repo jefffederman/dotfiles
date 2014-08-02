@@ -32,7 +32,7 @@ alias fr="foreman run"
 alias frbx="foreman run bundle exec"
 alias bower="noglob bower"
 alias m2="mate"
-alias woofly_api="cd $HOME/Dropbox/Alice_Lam/Woofly/API/woofly_api"
+alias woofly_api="cd $HOME/Code/Woofly/API/woofly-api"
 alias fgbp="cd $HOME/Code/Funding_Gates/Business-Portal"
 
 export GOPATH="$HOME/Code/golang"
