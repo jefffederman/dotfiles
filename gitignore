@@ -2,3 +2,7 @@
 .svn
 *.swp
 .com.apple.timemachine.supported
+.divshot-cache
+**/*/divshot.json
+.envrc
+.env

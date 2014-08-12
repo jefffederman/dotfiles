@@ -21,7 +21,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export NODE_PATH=$HOME/node_modules
-export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin
+export GOROOT=`go env GOROOT`
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin:$GOROOT/bin
 export EDITOR=vim
 
 alias mvim="nocorrect mvim"
@@ -38,3 +39,5 @@ alias fgbp="cd $HOME/Code/Funding_Gates/Business-Portal"
 export GOPATH="$HOME/Code/golang"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+eval "$(direnv hook zsh)"
