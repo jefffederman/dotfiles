@@ -1,8 +1,3 @@
-# From chruby install instructions
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby 2.1.2
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -20,9 +15,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export NODE_PATH=$HOME/node_modules
 export GOROOT=`go env GOROOT`
-export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:$NODE_PATH/.bin:$GOROOT/bin
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:/.bin:$GOROOT/bin
 export EDITOR=vim
 
 alias mvim="nocorrect mvim"
@@ -34,10 +28,13 @@ alias frbx="foreman run bundle exec"
 alias bower="noglob bower"
 alias m2="mate"
 alias woofly_api="cd $HOME/Code/Woofly/API/woofly-api"
+alias clientwoofly="cd $HOME/Code/Woofly/API/Clients/woofly-client"
 alias fgbp="cd $HOME/Code/Funding_Gates/Business-Portal"
 
 export GOPATH="$HOME/Code/golang"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-eval "$(direnv hook zsh)"
+if [ $(command -v direnv 2>&1) ]; then
+  eval "$(direnv hook zsh)"
+fi
