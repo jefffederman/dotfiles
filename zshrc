@@ -30,6 +30,7 @@ alias m2="mate"
 alias woofly_api="cd $HOME/Code/Woofly/API/woofly-api"
 alias clientwoofly="cd $HOME/Code/Woofly/API/Clients/woofly-client"
 alias fgbp="cd $HOME/Code/Funding_Gates/Business-Portal"
+alias fgrui="cd $HOME/Code/Funding_Gates/receivables-manager-ui"
 
 export GOPATH="$HOME/Code/golang"
 ### Added by the Heroku Toolbelt
