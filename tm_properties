@@ -1,7 +1,7 @@
 # Settings
 
 fontName = "Menlo"
-fontSize = 18
+fontSize = 16
 
 excludeInFileChooser = "{$excludeInFileChooser,log,tmp}"
 # excludeInBrowser = "{$excludeInBrowser,log,tmp}"

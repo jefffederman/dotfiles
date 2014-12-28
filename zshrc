@@ -16,8 +16,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export GOROOT=`go env GOROOT`
-export PATH=./node_modules/.bin:/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:/.bin:$GOROOT/bin
+export PATH=./node_modules/.bin:/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:/.bin:$GOROOT/bin:/usr/local/opt/go/libexec/bin
 export EDITOR=vim
+
+export HISTSIZE=10000
+export SAVEHIST=$HISTSIZE
 
 alias mvim="nocorrect mvim"
 alias python3="nocorrect python3"
