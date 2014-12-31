@@ -23,7 +23,6 @@ export HISTSIZE=10000
 export SAVEHIST=$HISTSIZE
 
 alias mvim="nocorrect mvim"
-alias python3="nocorrect python3"
 alias gphm="git push heroku master"
 alias bx="bundle exec"
 alias fr="foreman run"
