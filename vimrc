@@ -24,7 +24,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'elixir-lang/vim-elixir'
-"Plugin 'carlosgaldino/elixir-snippets'
+Plugin 'carlosgaldino/elixir-snippets'
 
 call vundle#end()
 
