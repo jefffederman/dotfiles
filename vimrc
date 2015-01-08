@@ -92,3 +92,6 @@ map :vsp :vsplit
 
 " Go
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+" Python autocomplete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
