@@ -14,3 +14,7 @@ elif [ -f "/usr/local/opt/chruby/share/chruby/chruby.sh" ]; then
   [ -f ~/.ruby-version ] && chruby $(cat ~/.ruby-version)
   [ -f ./.ruby-version ] && chruby $(cat ./.ruby-version)
 fi
+
+# For python virtualenvs
+export WORKON_HOME="$HOME/Code/virtualenvs"
+source /usr/local/bin/virtualenvwrapper.sh
