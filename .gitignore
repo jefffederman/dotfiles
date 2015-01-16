@@ -31,6 +31,7 @@ build/
 *.un~
 Session.vim
 .netrwhist
+vim/bundle/**
 
 # Obj C
 *.perspectivev3
