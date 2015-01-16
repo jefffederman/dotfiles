@@ -35,6 +35,7 @@ alias fgbp="cd $HOME/Code/Funding_Gates/Business-Portal"
 alias fgrui="cd $HOME/Code/Funding_Gates/receivables-manager-ui"
 
 export GOPATH="$HOME/Code/golang"
+export PATH=$PATH:$GOPATH/bin
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 

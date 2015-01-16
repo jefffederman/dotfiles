@@ -22,7 +22,7 @@ Plugin 'vim-scripts/DeleteTrailingWhitespace'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'carlosgaldino/elixir-snippets'
 
@@ -91,9 +91,6 @@ map <Leader>l :call RunLastSpec()<CR>
 " Window splits
 map :sp :split
 map :vsp :vsplit
-
-" Go
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " Python autocomplete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
