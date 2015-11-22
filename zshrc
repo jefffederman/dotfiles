@@ -1,44 +1,44 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory autocd nomatch
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/jefffederman/.zshrc'
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="jfederman"
+autoload -Uz compinit
+compinit
+# Case insensitive completion
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+# End of lines added by compinstall
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
-source $ZSH/oh-my-zsh.sh
+# Prompt with git and virtualenv support, see https://www.codefellows.org/blog/bash-for-fun-profit
 
-# Customize to your needs...
-export GOROOT=`go env GOROOT`
-export PATH=./node_modules/.bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin:/usr/local/share/npm/bin:/.bin:$GOROOT/bin:/usr/local/opt/go/libexec/bin
-export EDITOR=vim
+source ~/.zsh/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWCOLORHINTS=true
 
-export HISTSIZE=10000
-export SAVEHIST=$HISTSIZE
+# Go
+export GOPATH=$HOME/Code/Go
+export PATH=/usr/local/sbin:$PATH:$GOPATH/bin
 
-alias mvim="nocorrect mvim"
-alias gphm="git push heroku master"
-alias bx="bundle exec"
-alias fr="foreman run"
-alias frbx="foreman run bundle exec"
-alias bower="noglob bower"
-alias m2="mate"
-alias woofly_api="cd $HOME/Code/Woofly/API/woofly-api"
-alias clientwoofly="cd $HOME/Code/Woofly/API/Clients/woofly-client"
-alias fgbp="cd $HOME/Code/Funding_Gates/Business-Portal"
-alias fgrui="cd $HOME/Code/Funding_Gates/receivables-manager-ui"
+setopt prompt_subst
+autoload -U colors && colors
 
-export GOPATH="$HOME/Code/golang"
-export PATH=$PATH:$GOPATH/bin
+local ruby_version="$(ruby -v | cut -d' ' -f 1-2)"
+
+precmd () { __git_ps1 "${VIRTUAL_ENV:+$fg[magenta](`basename $VIRTUAL_ENV`) $reset_color}$fg[black]%n$reset_color $fg[green]%~$reset_color $fg[black]$ruby_version$reset_color " "
+$%b " "%s" }
+
+alias m2='mate'
+alias ls='ls -Ga'
+alias bx='bundle exec'
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-if [ $(command -v direnv 2>&1) ]; then
-  eval "$(direnv hook zsh)"
-fi
