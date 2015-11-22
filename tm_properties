@@ -1,11 +1,11 @@
 # Settings
 
 fontName = "Menlo"
-fontSize = 18
+fontSize = 16
 
-excludeInFileChooser = "{$excludeInFileChooser,log,tmp}"
+excludeInFileChooser = "{$excludeInFileChooser,log,tmp,node_modules,deps,_build}"
 # excludeInBrowser = "{$excludeInBrowser,log,tmp}"
-excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp}"
+excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp,node_modules,deps,_build}"
 
 [ "*_spec.rb" ]
 fileType = 'source.ruby.rspec'

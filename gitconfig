@@ -21,6 +21,8 @@
 	email = jefffederman@gmail.com
 [core]
   excludesfile = /Users/jefffederman/.gitignore
+	editor = /usr/local/bin/vim
 [heroku]
-  account = personal
-  
+	account = personal
+[filter "trimWhitespace"]
+	clean = git-stripspace

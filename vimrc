@@ -2,31 +2,32 @@ filetype off
 filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 set nocompatible
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
+
 " My bundles here:
 "
 " Original Github repos:
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'kien/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'SirVer/ultisnips'
-Plugin 'tpope/vim-fugitive'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'vim-scripts/DeleteTrailingWhitespace'
-Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'fatih/vim-go'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'carlosgaldino/elixir-snippets'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-fugitive'
+Plug 'thoughtbot/vim-rspec', {'for': 'ruby'}
+Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
+Plug 'tpope/vim-rails', {'for': 'ruby'}
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'vim-scripts/DeleteTrailingWhitespace'
+Plug 'bling/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'kchmck/vim-coffee-script', {'for': 'coffeescript'}
+Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
+Plug 'carlosgaldino/elixir-snippets', {'for': 'elixir'}
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
+Plug 'lambdatoast/elm.vim', {'for': 'elm'}
 
-call vundle#end()
+call plug#end()
 
 syntax on
 filetype indent plugin on
@@ -72,7 +73,7 @@ set foldmethod=indent
 set nofoldenable "Don't fold by default
 set t_Co=256
 colorscheme solarized
-set background=dark
+set background=light
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
 let g:sparkupNextMapping = '<c-x>'
