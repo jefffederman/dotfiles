@@ -73,7 +73,7 @@ set foldmethod=indent
 set nofoldenable "Don't fold by default
 set t_Co=256
 colorscheme solarized
-set background=light
+set background=dark
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
 let g:sparkupNextMapping = '<c-x>'
@@ -92,6 +92,7 @@ map <Leader>l :call RunLastSpec()<CR>
 " Window splits
 map :sp :split
 map :vsp :vsplit
+set fillchars=""
 
 " Python autocomplete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
