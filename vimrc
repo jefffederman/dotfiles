@@ -35,7 +35,6 @@ let mapleader=" "
 
 set splitbelow
 set splitright
-set number
 set modelines=0
 set autoindent
 set smartindent
@@ -92,7 +91,8 @@ map <Leader>l :call RunLastSpec()<CR>
 " Window splits
 map :sp :split
 map :vsp :vsplit
-set fillchars=""
+set fillchars=vert:│
+hi VertSplit ctermbg=NONE guibg=NONE
 
 " Python autocomplete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
