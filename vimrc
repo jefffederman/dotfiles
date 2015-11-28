@@ -16,6 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'thoughtbot/vim-rspec', {'for': 'ruby'}
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
+Plug 'hwartig/vim-seeing-is-believing', {'for': 'ruby'}
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'bling/vim-airline'
@@ -96,3 +97,24 @@ hi VertSplit ctermbg=NONE guibg=NONE
 
 " Python autocomplete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+" Enable seeing-is-believing mappings only for Ruby
+augroup seeingIsBelievingSettings
+  autocmd!
+
+  autocmd FileType ruby nmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
+  autocmd FileType ruby xmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
+
+  autocmd FileType ruby nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+  autocmd FileType ruby imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
+
+  autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
+  autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing-is-believing-run)
+augroup END
+
+" Insert today’s date (human)
+command! Today :normal a<c-r>=strftime('%b %d, %Y')<cr>
+
+" Insert today’s date (ISO)
+command! IsoD :normal a<c-r>=strftime('%F')<cr>
