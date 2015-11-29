@@ -31,10 +31,13 @@ export PATH=/usr/local/sbin:$PATH:$GOPATH/bin
 setopt prompt_subst
 autoload -U colors && colors
 
+my_prompt () {
 local ruby_version="$(ruby -v | cut -d' ' -f 1-2)"
+__git_ps1 "${VIRTUAL_ENV:+$fg[magenta](`basename $VIRTUAL_ENV`) $reset_color}$fg[black]%n$reset_color $fg[green]%~$reset_color $fg[black]$ruby_version$reset_color " "
+$%b " "%s"
+}
 
-precmd () { __git_ps1 "${VIRTUAL_ENV:+$fg[magenta](`basename $VIRTUAL_ENV`) $reset_color}$fg[black]%n$reset_color $fg[green]%~$reset_color $fg[black]$ruby_version$reset_color " "
-$%b " "%s" }
+precmd_functions+=('my_prompt')
 
 alias m2='mate'
 alias ls='ls -Ga'
