@@ -34,7 +34,7 @@ autoload -U colors && colors
 my_prompt () {
 local ruby_version="$(ruby -v | cut -d' ' -f 1-2)"
 __git_ps1 "${VIRTUAL_ENV:+$fg[magenta](`basename $VIRTUAL_ENV`) $reset_color}$fg[black]%n$reset_color $fg[green]%~$reset_color $fg[black]$ruby_version$reset_color " "
-$%b " "%s"
+$fg_bold[magenta]❯$fg_no_bold[blue]❯$fg[cyan]❯%b " "%s"
 }
 
 precmd_functions+=('my_prompt')
@@ -42,6 +42,8 @@ precmd_functions+=('my_prompt')
 alias m2='mate'
 alias ls='ls -Ga'
 alias bx='bundle exec'
+# See http://stackoverflow.com/questions/4822471/count-number-of-lines-in-a-git-repository
+alias linesofcode='cloc $(git ls-files)'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
