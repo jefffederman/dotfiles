@@ -32,6 +32,8 @@ build/
 Session.vim
 .netrwhist
 vim/bundle/**
+vim/plugged/**
+vim/autoload/**
 
 # Obj C
 *.perspectivev3

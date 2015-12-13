@@ -33,7 +33,13 @@ autoload -U colors && colors
 
 my_prompt () {
 local ruby_version="$(ruby -v | cut -d' ' -f 1-2)"
-__git_ps1 "${VIRTUAL_ENV:+$fg[magenta](`basename $VIRTUAL_ENV`) $reset_color}$fg[black]%n$reset_color $fg[green]%~$reset_color $fg[black]$ruby_version$reset_color " "
+local default_user=`whoami`
+local username=""
+if [[ "$USER" != "$default_user" ]]; then
+  username="%n"
+fi
+
+__git_ps1 "${VIRTUAL_ENV:+$fg[magenta](`basename $VIRTUAL_ENV`) $reset_color}$fg[black]$username$reset_color $fg[green]%~$reset_color $fg[black]$ruby_version$reset_color " "
 $fg_bold[magenta]❯$fg_no_bold[blue]❯$fg[cyan]❯%b " "%s"
 }
 

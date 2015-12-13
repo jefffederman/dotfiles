@@ -17,13 +17,11 @@ Plug 'thoughtbot/vim-rspec', {'for': 'ruby'}
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'hwartig/vim-seeing-is-believing', {'for': 'ruby'}
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'bling/vim-airline'
-Plug 'edkolev/tmuxline.vim'
 Plug 'kchmck/vim-coffee-script', {'for': 'coffeescript'}
 Plug 'fatih/vim-go', {'for': 'go'}
-Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
+Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'html']}
 Plug 'carlosgaldino/elixir-snippets', {'for': 'elixir'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'lambdatoast/elm.vim', {'for': 'elm'}
@@ -72,10 +70,10 @@ nmap k gk
 set foldmethod=indent
 set nofoldenable "Don't fold by default
 set t_Co=256
-colorscheme solarized
-set background=dark
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
+colorscheme solarized
+set background=dark
 let g:sparkupNextMapping = '<c-x>'
 
 let g:UltiSnipsExpandTrigger="<tab>"
