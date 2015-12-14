@@ -111,6 +111,10 @@ augroup seeingIsBelievingSettings
   autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing-is-believing-run)
 augroup END
 
+" Enable Sparkup for .eex files
+" HACK - real problem is that .eex files are not properly syntax highlighted
+autocmd FileType eelixir runtime! ftplugin/html/sparkup.vim
+
 " Insert today’s date (human)
 command! Today :normal a<c-r>=strftime('%b %d, %Y')<cr>
 
