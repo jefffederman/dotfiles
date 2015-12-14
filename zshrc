@@ -31,20 +31,27 @@ setopt prompt_subst
 autoload -U colors && colors
 
 my_prompt () {
-local ruby_version="$(ruby -v | cut -d' ' -f 1-2)"
-local default_user=`whoami`
-local username=""
-if [[ "$USER" != "$default_user" ]]; then
-  username="%n"
-fi
+  local ruby_version="$(ruby -v | cut -d' ' -f 1-2)"
+  local default_user=`whoami`
+  local username=""
+  if [[ "$USER" != "$default_user" ]]; then
+    username="%n"
+  fi
 
-# The `__git_ps1` function takes three string params:
-# • Text before the git output
-# • Text after the git output
-# • Format for the git output
+  local venv_segment="%F{magenta}${VIRTUAL_ENV:+(`basename $VIRTUAL_ENV`) }%f"
+  local user_segment="%F{black}$username%f"
+  local path_segment="%F{green}%~%f"
+  local ruby_segment="%F{black}$ruby_version%f"
+  local prompt_segment="%F{61}❯%f%F{blue}❯%f%F{cyan}❯%f "
 
-__git_ps1 "${VIRTUAL_ENV:+$fg[magenta](`basename $VIRTUAL_ENV`) $reset_color}$fg[black]$username$reset_color $fg[green]%~$reset_color $fg[black]$ruby_version$reset_color " "
-%{$fg_bold[magenta]%}❯%{$fg_no_bold[blue]%}❯%{$fg[cyan]%}❯%{$reset_color%} " "%s"
+  # See http://ithaca.arpinum.org/2013/01/02/git-prompt.html
+  # The `__git_ps1` function takes three string params:
+  # • Text before the git output
+  # • Text after the git output
+  # • Format for the git output
+
+  __git_ps1 "$venv_segment$user_segment $path_segment $ruby_segment " "
+$prompt_segment" "%s"
 }
 
 precmd_functions+=('my_prompt')
