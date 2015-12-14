@@ -38,8 +38,13 @@ if [[ "$USER" != "$default_user" ]]; then
   username="%n"
 fi
 
+# The `__git_ps1` function takes three string params:
+# • Text before the git output
+# • Text after the git output
+# • Format for the git output
+
 __git_ps1 "${VIRTUAL_ENV:+$fg[magenta](`basename $VIRTUAL_ENV`) $reset_color}$fg[black]$username$reset_color $fg[green]%~$reset_color $fg[black]$ruby_version$reset_color " "
-%{$fg_bold[magenta]%}❯%{$fg_no_bold[blue]%}❯%{$fg[cyan]%}❯%{$reset_color%} "
+%{$fg_bold[magenta]%}❯%{$fg_no_bold[blue]%}❯%{$fg[cyan]%}❯%{$reset_color%} " "%s"
 }
 
 precmd_functions+=('my_prompt')
