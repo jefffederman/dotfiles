@@ -18,7 +18,6 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Prompt with git and virtualenv support, see https://www.codefellows.org/blog/bash-for-fun-profit
-
 source ~/.zsh/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -40,7 +39,7 @@ if [[ "$USER" != "$default_user" ]]; then
 fi
 
 __git_ps1 "${VIRTUAL_ENV:+$fg[magenta](`basename $VIRTUAL_ENV`) $reset_color}$fg[black]$username$reset_color $fg[green]%~$reset_color $fg[black]$ruby_version$reset_color " "
-$fg_bold[magenta]❯$fg_no_bold[blue]❯$fg[cyan]❯%b " "%s"
+%{$fg_bold[magenta]%}❯%{$fg_no_bold[blue]%}❯%{$fg[cyan]%}❯%{$reset_color%} "
 }
 
 precmd_functions+=('my_prompt')
