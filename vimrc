@@ -12,6 +12,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'thoughtbot/vim-rspec', {'for': 'ruby'}
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
@@ -21,8 +22,7 @@ Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'bling/vim-airline'
 Plug 'kchmck/vim-coffee-script', {'for': 'coffeescript'}
 Plug 'fatih/vim-go', {'for': 'go'}
-Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'html']}
-Plug 'carlosgaldino/elixir-snippets', {'for': 'elixir'}
+Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'lambdatoast/elm.vim', {'for': 'elm'}
 
@@ -112,7 +112,6 @@ augroup seeingIsBelievingSettings
 augroup END
 
 " Enable Sparkup for .eex files
-" HACK - real problem is that .eex files are not properly syntax highlighted
 autocmd FileType eelixir runtime! ftplugin/html/sparkup.vim
 
 " Insert today’s date (human)
@@ -120,3 +119,5 @@ command! Today :normal a<c-r>=strftime('%b %d, %Y')<cr>
 
 " Insert today’s date (ISO)
 command! IsoD :normal a<c-r>=strftime('%F')<cr>
+
+nnoremap <F2> :set nu!<CR>
