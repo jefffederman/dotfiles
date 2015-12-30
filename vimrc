@@ -25,6 +25,9 @@ Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'lambdatoast/elm.vim', {'for': 'elm'}
+Plug 'sanmiguel/helpex.vim', {'for': ['elixir', 'eelixir']}
+Plug 'Shougo/vimproc.vim', {'do': 'make'} " helpex.vim dependency
+Plug 'thinca/vim-ref' " helpex.vim dependency
 
 call plug#end()
 
