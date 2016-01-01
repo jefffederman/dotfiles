@@ -33,6 +33,9 @@ export PATH=/usr/local/sbin:$PATH:$GOPATH/bin
 setopt prompt_subst
 autoload -U colors && colors
 
+# rbenv
+eval "$(rbenv init -)"
+
 my_prompt () {
   local ruby_version="$(ruby -v | cut -d' ' -f 1-2)"
   local default_user=`whoami`
