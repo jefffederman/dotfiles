@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 "
 " Original Github repos:
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
