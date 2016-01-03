@@ -27,9 +27,6 @@ export GIT_PS1_SHOWCOLORHINTS=true
 export GOPATH=$HOME/Code/Go
 export PATH=/usr/local/sbin:$PATH:$GOPATH/bin
 
-# Elixir version manager
-[[ -s $HOME/.kiex/scripts/kiex ]] && source $HOME/.kiex/scripts/kiex
-
 setopt prompt_subst
 autoload -U colors && colors
 
