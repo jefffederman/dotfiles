@@ -37,8 +37,10 @@ values."
      markdown
      org
      python
+     react
      (ruby :variables
-           ruby-version-manager 'chruby)
+           ruby-version-manager 'chruby
+           ruby-enable-enh-ruby-mode t)
      ruby-on-rails
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -206,7 +208,8 @@ user code."
 layers configuration. You are free to put any user code."
   (setq powerline-default-separator 'arrow)
   (add-hook 'alchemist-mode-hook 'company-mode)
-  (add-hook 'ruby-mode-hook 'robe-mode)
+  (add-hook 'enh-ruby-mode-hook 'robe-mode)
+  (add-hook 'before-save-hook 'delete-trailing-whitespace)
   (setq-default evil-escape-key-sequence "jj")
   (setq-default evil-escape-delay 0.2)
 )
