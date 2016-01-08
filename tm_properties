@@ -9,3 +9,6 @@ excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp,node_modules,deps,_buil
 
 [ "*_spec.rb" ]
 fileType = 'source.ruby.rspec'
+
+# Variables
+TM_RUBY = "$HOME/.chruby-shim"
