@@ -29,6 +29,7 @@ Plug 'Shougo/vimproc.vim', {'do': 'make'} " helpex.vim dependency
 Plug 'thinca/vim-ref' " helpex.vim dependency
 Plug 'janko-m/vim-test'
 Plug 'benmills/vimux'
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
 syntax on
