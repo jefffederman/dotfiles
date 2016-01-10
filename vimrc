@@ -77,6 +77,7 @@ set nofoldenable "Don't fold by default
 set t_Co=256
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tmuxline#enabled = 0
 colorscheme solarized
 set background=dark
 let g:sparkupNextMapping = '<c-x>'
