@@ -14,7 +14,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
-Plug 'thoughtbot/vim-rspec', {'for': 'ruby'}
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'hwartig/vim-seeing-is-believing', {'for': 'ruby'}
@@ -28,12 +27,14 @@ Plug 'lambdatoast/elm.vim', {'for': 'elm'}
 Plug 'sanmiguel/helpex.vim', {'for': ['elixir', 'eelixir']}
 Plug 'Shougo/vimproc.vim', {'do': 'make'} " helpex.vim dependency
 Plug 'thinca/vim-ref' " helpex.vim dependency
-
+Plug 'janko-m/vim-test'
+Plug 'benmills/vimux'
 call plug#end()
 
 syntax on
 filetype indent plugin on
 let mapleader=" "
+"nmap ; :
 
 set splitbelow
 set splitright
@@ -85,10 +86,19 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:mustache_abbreviations = 1
 
-" Rspec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+" vim-test mappings
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+let test#strategy = "vimux"
+
+" Vimux mappings
+" See https://raw.githubusercontent.com/benmills/vimux/master/doc/vimux.txt
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
+map <Leader>vz :VimuxZoomRunner<CR>
 
 " Window splits
 map :sp :split
@@ -123,4 +133,4 @@ command! Today :normal a<c-r>=strftime('%b %d, %Y')<cr>
 " Insert today’s date (ISO)
 command! IsoD :normal a<c-r>=strftime('%F')<cr>
 
-nnoremap <F2> :set nu!<CR>
+nnoremap <F2> :set rnu!<CR>
