@@ -30,6 +30,8 @@ Plug 'thinca/vim-ref' " helpex.vim dependency
 Plug 'janko-m/vim-test'
 Plug 'benmills/vimux'
 Plug 'edkolev/tmuxline.vim'
+Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+Plug 'mxw/vim-jsx', {'for': 'javascript'}
 call plug#end()
 
 syntax on
