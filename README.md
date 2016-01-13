@@ -40,6 +40,7 @@
 * Firefox
 * Firefox Nightly
 * Kindle (App Store)
+* AppCleaner
 
 ## Vim
 
