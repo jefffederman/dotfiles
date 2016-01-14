@@ -138,3 +138,9 @@ command! Today :normal a<c-r>=strftime('%b %d, %Y')<cr>
 command! IsoD :normal a<c-r>=strftime('%F')<cr>
 
 nnoremap <F2> :set rnu!<CR>
+
+" Associate .es6 with javascript filetype
+au BufRead,BufNewFile *.es6 setfiletype javascript
+
+" Shortcut to turn off search highlighting
+nnoremap <leader>c :nohlsearch<CR>
