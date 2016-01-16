@@ -24,6 +24,8 @@
   * tree
   * wget
   * zsh
+  * openssl
+    * brew link --force openssl
 * Textmate 2
 * iTerm2
 * Mou
