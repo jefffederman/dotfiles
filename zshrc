@@ -61,6 +61,7 @@ alias ls='ls -Ga'
 alias bx='bundle exec'
 # See http://stackoverflow.com/questions/4822471/count-number-of-lines-in-a-git-repository
 alias linesofcode='cloc $(git ls-files)'
+alias cleancontainers='docker rm $(docker ps -aq)'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
