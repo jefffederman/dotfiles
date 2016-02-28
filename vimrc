@@ -19,7 +19,7 @@ Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'hwartig/vim-seeing-is-believing', {'for': 'ruby'}
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'bling/vim-airline'
-Plug 'kchmck/vim-coffee-script', {'for': 'coffeescript'}
+Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
