@@ -32,6 +32,7 @@ Plug 'benmills/vimux'
 Plug 'edkolev/tmuxline.vim'
 Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
+Plug 'rust-lang/rust.vim', {'for': 'rust'}
 call plug#end()
 
 syntax on
