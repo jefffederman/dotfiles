@@ -62,6 +62,7 @@ alias bx='bundle exec'
 # See http://stackoverflow.com/questions/4822471/count-number-of-lines-in-a-git-repository
 alias linesofcode='cloc $(git ls-files)'
 alias cleancontainers='docker rm $(docker ps -aq)'
+alias kdb="kubectl --kubeconfig='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopment/kubeconfig' --namespace='broadway'"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
