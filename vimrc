@@ -138,7 +138,19 @@ command! Today :normal a<c-r>=strftime('%b %d, %Y')<cr>
 " Insert today’s date (ISO)
 command! IsoD :normal a<c-r>=strftime('%F')<cr>
 
-nnoremap <F2> :set rnu!<CR>
+" Easy line number toggling
+" See http://superuser.com/a/963845/203748
+function! NumberToggle()
+  if(&nu == 1)
+    set nu!
+    set rnu
+  else
+    set nornu
+    set nu
+  endif
+endfunction
+
+nnoremap <F2> :call NumberToggle()<CR>
 
 " Associate .es6 with javascript filetype
 au BufRead,BufNewFile *.es6 setfiletype javascript
