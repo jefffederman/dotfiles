@@ -27,6 +27,9 @@ export GIT_PS1_SHOWCOLORHINTS=true
 export GOPATH=$HOME/Code/Go
 export PATH=/usr/local/sbin:$PATH:$GOPATH/bin
 
+# Yarn
+export PATH="$PATH:$HOME/.yarn/bin"
+
 setopt prompt_subst
 autoload -U colors && colors
 
@@ -63,6 +66,8 @@ alias bx='bundle exec'
 alias linesofcode='cloc $(git ls-files)'
 alias cleancontainers='docker rm $(docker ps -aq)'
 alias kdb="kubectl --kubeconfig='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopment/kubeconfig' --namespace='broadway'"
+alias dco="docker-compose"
+function dx() { docker exec -ti $(docker ps -f name=$1 -q) $2 }
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
