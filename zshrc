@@ -66,8 +66,20 @@ alias bx='bundle exec'
 alias linesofcode='cloc $(git ls-files)'
 alias cleancontainers='docker rm $(docker ps -aq)'
 alias kdb="kubectl --kubeconfig='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopment/kubeconfig' --namespace='broadway'"
+
+# Docker
 alias dco="docker-compose"
 function dx() { docker exec -ti $(docker ps -f name=$1 -q) $2 }
 
+docker_running=$(docker-machine ls | grep default)
+if [[ "$docker_running" == *"Stopped"* ]]
+then
+  docker-machine start default
+  eval "$(docker-machine env default)"
+  env | grep "DOCKER_HOST"
+elif [[ "$docker_running" == *"Running"* ]]
+then
+  eval "$(docker-machine env default)"
+fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
