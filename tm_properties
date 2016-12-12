@@ -10,8 +10,11 @@ excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp,node_modules,deps,_buil
 [ "*_spec.rb" ]
 fileType = 'source.ruby.rspec'
 
-[ "*.es6", "*.jsx" ]
+[ "*.{es6}" ]
+fileType = 'source.js.babel'
+[ "*.{jsx}" ]
 fileType = 'source.js.babel'
 
-# Variables
+# Variables (don’t appear to work?)
 TM_RUBY = "$HOME/.chruby-shim"
+TM_TAGS_FILE = "$TM_PROJECT_DIRECTORY/.git/tags"
