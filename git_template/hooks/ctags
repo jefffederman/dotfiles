@@ -1,8 +1,10 @@
 #!/bin/sh
+# Slightly changed from Tim Pope’s original, see:
+# http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html#comment-1502773044
 set -e
 PATH="/usr/local/bin:$PATH"
 dir="`git rev-parse --git-dir`"
 trap 'rm -f "$dir/$$.tags"' EXIT
 git ls-files | \
-  ctags --tag-relative -L - -f"$dir/$$.tags" --languages=-javascript,sql
+  ctags --tag-relative -L - -f"$dir/$$.tags" --languages=-javascript,sql --exclude=node_modules --exclude='*\.min\.*'
   mv "$dir/$$.tags" "$dir/tags"
