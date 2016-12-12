@@ -6,8 +6,6 @@
 * Homebrew
 	* git
 	* vim
-  * macvim
-  * spacemacs
 	* PostgreSQL
 	* chruby
 	* ruby-install
@@ -25,12 +23,12 @@
   * wget
   * zsh
   * openssl
-    * brew link --force openssl
+      * brew link --force openssl
+  * elixir
 * Textmate 2
 * iTerm2
 * Mou
 * VirtualBox
-* Vagrant
 * Cyberduck (App Store)
 * Divvy (App Store)
 * Magnet (App Store)
@@ -38,12 +36,20 @@
 * Crosshairs (App Store)
 * Dropbox
 * Chrome
-* Chrome Canary
 * Firefox
-* Firefox Nightly
 * Kindle (App Store)
 * AppCleaner
+* Atom
 
 ## Vim
 
 * Download [Powerline patched fonts](https://github.com/powerline/fonts)
+
+## CTags
+
+Taken (mostly) from <http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html>
+
+TODOs
+* Try with ripper-tags (better Ruby support)
+* Build tags for chruby rubies
+* Build tags for gems on install
