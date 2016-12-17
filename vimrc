@@ -14,25 +14,26 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
-Plug 'tpope/vim-rails', {'for': 'ruby'}
-Plug 'hwartig/vim-seeing-is-believing', {'for': 'ruby'}
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'bling/vim-airline'
-Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'fatih/vim-go', {'for': 'go'}
-Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
-Plug 'lambdatoast/elm.vim', {'for': 'elm'}
-Plug 'sanmiguel/helpex.vim', {'for': ['elixir', 'eelixir']}
-Plug 'Shougo/vimproc.vim', {'do': 'make'} " helpex.vim dependency
-Plug 'thinca/vim-ref' " helpex.vim dependency
 Plug 'janko-m/vim-test'
 Plug 'benmills/vimux'
 Plug 'edkolev/tmuxline.vim'
+" Ruby
+Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
+Plug 'tpope/vim-rails', {'for': 'ruby'}
+Plug 'hwartig/vim-seeing-is-believing', {'for': 'ruby'}
+" JavaScript
+Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
-Plug 'rust-lang/rust.vim', {'for': 'rust'}
+" Elixir
+Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
+Plug 'sanmiguel/helpex.vim', {'for': ['elixir', 'eelixir']}
+Plug 'Shougo/vimproc.vim', {'do': 'make'} " helpex.vim dependency
+Plug 'thinca/vim-ref' " helpex.vim dependency
 call plug#end()
 
 syntax on
