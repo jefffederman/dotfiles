@@ -81,8 +81,9 @@ set t_Co=256
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
-colorscheme solarized
-set background=dark
+set termguicolors
+" https://github.com/lifepillar/vim-solarized8
+colorscheme solarized8_dark_high
 let g:sparkupNextMapping = '<c-x>'
 
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -157,3 +158,9 @@ au BufRead,BufNewFile *.es6 setfiletype javascript
 
 " Shortcut to turn off search highlighting
 nnoremap <leader>c :nohlsearch<CR>
+
+" Toggle between Solarized dark/light
+nnoremap  <leader>b :<c-u>exe "colors" (g:colors_name =~# "dark"
+    \ ? substitute(g:colors_name, 'dark', 'light', '')
+    \ : substitute(g:colors_name, 'light', 'dark', '')
+    \ )<cr>
