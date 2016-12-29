@@ -30,6 +30,9 @@ export PATH=/usr/local/sbin:$PATH:$GOPATH/bin
 # Yarn
 export PATH="$PATH:$HOME/.yarn/bin"
 
+# Me
+export PATH="$PATH:$HOME/bin"
+
 setopt prompt_subst
 autoload -U colors && colors
 
