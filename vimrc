@@ -100,12 +100,6 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "asyncrun"
 
-" Vimux mappings
-" See https://raw.githubusercontent.com/benmills/vimux/master/doc/vimux.txt
-map <Leader>vi :VimuxInspectRunner<CR>
-map <Leader>vq :VimuxCloseRunner<CR>
-map <Leader>vz :VimuxZoomRunner<CR>
-
 " Window splits
 map :sp :split
 map :vsp :vsplit
