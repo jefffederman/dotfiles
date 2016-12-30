@@ -3,7 +3,12 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory autocd nomatch
-bindkey -e
+#bindkey -e
+# Vim key bindings
+# https://danielmiessler.com/blog/enhancements-to-shell-and-vim-productivity
+bindkey -v
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey '^R' history-incremental-search-backward
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/jefffederman/.zshrc'
@@ -86,3 +91,4 @@ then
 fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
