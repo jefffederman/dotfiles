@@ -161,5 +161,5 @@ function! ToggleSolarized()
         \ )
 endfunction
 
-nnoremap <F5> :call ToggleSolarized()<CR>
+nnoremap <F7> :call ToggleSolarized()<CR>
 
