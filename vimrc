@@ -83,7 +83,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
 set termguicolors
 " https://github.com/lifepillar/vim-solarized8
-colorscheme solarized8_dark_high
+colorscheme solarized8_dark
 let g:sparkupNextMapping = '<c-x>'
 
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -154,7 +154,12 @@ au BufRead,BufNewFile *.es6 setfiletype javascript
 nnoremap <leader>c :nohlsearch<CR>
 
 " Toggle between Solarized dark/light
-nnoremap  <leader>b :<c-u>exe "colors" (g:colors_name =~# "dark"
-    \ ? substitute(g:colors_name, 'dark', 'light', '')
-    \ : substitute(g:colors_name, 'light', 'dark', '')
-    \ )<cr>
+function! ToggleSolarized()
+  exe "colors" (g:colors_name =~# "dark"
+        \ ? substitute(g:colors_name, 'dark', 'light', '')
+        \ : substitute(g:colors_name, 'light', 'dark', '')
+        \ )
+endfunction
+
+nnoremap <F5> :call ToggleSolarized()<CR>
+
