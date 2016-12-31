@@ -20,6 +20,7 @@ Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'janko-m/vim-test'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'ivalkeen/vim-ctrlp-tjump'
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
@@ -163,3 +164,9 @@ endfunction
 
 nnoremap <F7> :call ToggleSolarized()<CR>
 
+" Tags
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
+let g:ctrlp_tjump_only_silent = 1
+let g:ctrlp_tjump_skip_tag_name = 1
+set tags=.git/tags,.git/gem_tags,.git/lib_tags
