@@ -25,6 +25,7 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'hwartig/vim-seeing-is-believing', {'for': 'ruby'}
+Plug 'tpope/vim-bundler', {'for': 'ruby'}
 " JavaScript
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'pangloss/vim-javascript', {'for': 'javascript'}
@@ -169,4 +170,5 @@ nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
 let g:ctrlp_tjump_only_silent = 1
 let g:ctrlp_tjump_skip_tag_name = 1
-set tags=.git/tags,.git/gem_tags,.git/lib_tags
+let g:ctrlp_tjump_shortener = ['/Users/jefffederman/.*/gems/', '.../']
+set tags=.git/tags
