@@ -24,7 +24,6 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
-Plug 'hwartig/vim-seeing-is-believing', {'for': 'ruby'}
 Plug 'tpope/vim-bundler', {'for': 'ruby'}
 " JavaScript
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
@@ -110,21 +109,6 @@ hi VertSplit ctermbg=NONE guibg=NONE
 
 " Python autocomplete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-
-" Enable seeing-is-believing mappings only for Ruby
-augroup seeingIsBelievingSettings
-  autocmd!
-
-  autocmd FileType ruby nmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
-  autocmd FileType ruby xmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
-
-  autocmd FileType ruby nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-  autocmd FileType ruby xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-  autocmd FileType ruby imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-
-  autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
-  autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing-is-believing-run)
-augroup END
 
 " Enable Sparkup for .eex files
 autocmd FileType eelixir runtime! ftplugin/html/sparkup.vim
