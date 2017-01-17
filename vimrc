@@ -21,6 +21,7 @@ Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'janko-m/vim-test'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'ivalkeen/vim-ctrlp-tjump'
+Plug 'FelikZ/ctrlp-py-matcher'
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
@@ -156,3 +157,14 @@ let g:ctrlp_tjump_only_silent = 1
 let g:ctrlp_tjump_skip_tag_name = 1
 let g:ctrlp_tjump_shortener = ['/Users/jefffederman/.*/gems/', '.../']
 set tags=.git/tags
+
+" Faster CtrlP
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" See
+" https://medium.com/a-tiny-piece-of-vim/making-ctrlp-vim-load-100x-faster-7a722fae7df6#.6mrls1rvo
+" See https://github.com/kien/ctrlp.vim/issues/273
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
