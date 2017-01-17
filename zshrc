@@ -89,6 +89,15 @@ elif [[ "$docker_running" == *"Running"* ]]
 then
   eval "$(docker-machine env default)"
 fi
-### Added by the Heroku Toolbelt
+
+# fbr - checkout git branch
+fbr() {
+  local branches branch
+  branches=$(git branch -vv) &&
+    branch=$(echo "$branches" | fzf +m) &&
+    git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
+## Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
