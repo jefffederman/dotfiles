@@ -153,7 +153,7 @@ nnoremap <F7> :call ToggleSolarized()<CR>
 " Tags
 nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
-let g:ctrlp_tjump_only_silent = 1
+      let g:ctrlp_tjump_only_silent = 1
 let g:ctrlp_tjump_skip_tag_name = 1
 let g:ctrlp_tjump_shortener = ['/Users/jefffederman/.*/gems/', '.../']
 set tags=.git/tags
