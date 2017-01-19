@@ -37,6 +37,7 @@ export PATH="$PATH:$HOME/.yarn/bin"
 
 # Me
 export PATH="$PATH:$HOME/bin"
+export EDITOR='vim'
 
 setopt prompt_subst
 autoload -U colors && colors
