@@ -19,9 +19,9 @@ Plug 'bling/vim-airline'
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'janko-m/vim-test'
-Plug 'skywind3000/asyncrun.vim'
 Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'tpope/vim-vinegar'
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
@@ -100,7 +100,7 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
-let test#strategy = "asyncrun"
+let test#strategy = "iterm"
 
 " Window splits
 map :sp :split
