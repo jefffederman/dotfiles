@@ -94,6 +94,9 @@ then
   eval "$(docker-machine env default)"
 fi
 
+## Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 # fbr - checkout git branch
 fbr() {
   local branches branch
