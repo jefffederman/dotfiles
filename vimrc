@@ -68,6 +68,7 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
+set autoread
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
