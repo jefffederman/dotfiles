@@ -22,6 +22,7 @@ Plug 'janko-m/vim-test'
 Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'tpope/vim-vinegar'
+Plug 'neomake/neomake'
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
