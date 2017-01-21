@@ -125,13 +125,7 @@ command! IsoD :normal a<c-r>=strftime('%F')<cr>
 " Easy line number toggling
 " See http://superuser.com/a/963845/203748
 function! NumberToggle()
-  if(&nu == 1)
-    set nu!
-    set rnu
-  else
-    set nornu
-    set nu
-  endif
+  :let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]
 endfunction
 
 nnoremap <F2> :call NumberToggle()<CR>
