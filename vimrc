@@ -84,6 +84,7 @@ nmap j gj
 nmap k gk
 set foldmethod=indent
 set nofoldenable "Don't fold by default
+let g:ruby_foldable_groups = 'def' " Only fold ruby methods
 set t_Co=256
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
@@ -105,7 +106,7 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
-let test#strategy = "iterm"
+let test#strategy = "neovim"
 
 " Window splits
 map :sp :split
@@ -152,7 +153,7 @@ nnoremap <F7> :call ToggleSolarized()<CR>
 " Tags
 nnoremap <c-]> :CtrlPtjump<cr>
 vnoremap <c-]> :CtrlPtjumpVisual<cr>
-      let g:ctrlp_tjump_only_silent = 1
+let g:ctrlp_tjump_only_silent = 1
 let g:ctrlp_tjump_skip_tag_name = 1
 let g:ctrlp_tjump_shortener = ['/Users/jefffederman/.*/gems/', '.../']
 set tags=.git/tags
