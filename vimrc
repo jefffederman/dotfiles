@@ -16,6 +16,7 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'janko-m/vim-test'
