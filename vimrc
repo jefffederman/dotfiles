@@ -24,6 +24,7 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'tpope/vim-vinegar'
 Plug 'neomake/neomake'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
@@ -39,6 +40,7 @@ Plug 'Shougo/vimproc.vim', {'do': 'make'} " helpex.vim dependency
 Plug 'thinca/vim-ref' " helpex.vim dependency
 call plug#end()
 
+call deoplete#enable()
 syntax on
 filetype indent plugin on
 let mapleader=" "
@@ -165,3 +167,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" Neomake
+autocmd! BufWritePost * Neomake
+
