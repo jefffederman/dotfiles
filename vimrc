@@ -35,9 +35,7 @@ Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
-Plug 'sanmiguel/helpex.vim', {'for': ['elixir', 'eelixir']}
-Plug 'Shougo/vimproc.vim', {'do': 'make'} " helpex.vim dependency
-Plug 'thinca/vim-ref' " helpex.vim dependency
+Plug 'slashmili/alchemist.vim', {'for': ['elixir', 'eelixir']}
 call plug#end()
 
 call deoplete#enable()
@@ -84,7 +82,8 @@ nmap j gj
 nmap k gk
 set foldmethod=indent
 set nofoldenable "Don't fold by default
-let g:ruby_foldable_groups = 'def' " Only fold ruby methods
+"let ruby_foldable_groups = 'def' " Only fold ruby methods; doesn't appear to
+"work :/
 set t_Co=256
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
 let g:airline_powerline_fonts = 1
