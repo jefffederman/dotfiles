@@ -99,6 +99,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:mustache_abbreviations = 1
 
+" Move selected block up/down in visual mode
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " vim-test mappings
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
