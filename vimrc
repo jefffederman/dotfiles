@@ -36,6 +36,8 @@ Plug 'mxw/vim-jsx', {'for': 'javascript'}
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
 Plug 'slashmili/alchemist.vim', {'for': ['elixir', 'eelixir']}
+" Themes
+Plug 'cocopon/iceberg.vim'
 call plug#end()
 
 call deoplete#enable()
@@ -90,7 +92,8 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
 set termguicolors
 " https://github.com/lifepillar/vim-solarized8
-colorscheme solarized8_dark
+"colorscheme solarized8_dark
+colorscheme iceberg
 let g:sparkupNextMapping = '<c-x>'
 
 let g:UltiSnipsExpandTrigger="<tab>"
