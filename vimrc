@@ -44,7 +44,6 @@ call deoplete#enable()
 syntax on
 filetype indent plugin on
 let mapleader=" "
-"nmap ; :
 
 set splitbelow
 set splitright

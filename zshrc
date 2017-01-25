@@ -73,13 +73,16 @@ export NAMELY_DEV_KUBE_CONFIG='/Users/jefffederman/Code/Kubernetes/clusters/Name
 alias m2='mate'
 alias ls='ls -Ga'
 alias bx='bundle exec'
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
 # See http://stackoverflow.com/questions/4822471/count-number-of-lines-in-a-git-repository
 alias linesofcode='cloc $(git ls-files)'
-alias cleancontainers='docker rm $(docker ps -aq)'
 alias kdb="kubectl --kubeconfig=$NAMELY_DEV_KUBE_CONFIG --namespace='broadway'"
 alias kdh="kubectl --kubeconfig=$NAMELY_DEV_KUBE_CONFIG --namespace='default'"
 
 # Docker
+alias cleancontainers='docker rm $(docker ps -aq)'
 alias dco="docker-compose"
 function dx() { docker exec -ti $(docker ps -f name=$1 -q) $2 }
 
