@@ -91,7 +91,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
 set termguicolors
 " https://github.com/lifepillar/vim-solarized8
-"colorscheme solarized8_dark
+" colorscheme solarized8_dark
 colorscheme iceberg
 let g:sparkupNextMapping = '<c-x>'
 
