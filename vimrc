@@ -119,6 +119,10 @@ map :vsp :vsplit
 set fillchars=vert:│
 hi VertSplit ctermbg=NONE guibg=NONE
 
+" Tabs
+map <S-H> gT
+map <S-L> gt
+
 " Python autocomplete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
