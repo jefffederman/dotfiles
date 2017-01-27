@@ -118,9 +118,17 @@ map :vsp :vsplit
 set fillchars=vert:│
 hi VertSplit ctermbg=NONE guibg=NONE
 
-" Tabs
-map <S-H> gT
-map <S-L> gt
+" Buffers
+" See http://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+nmap <S-H> :bprev<CR>
+nmap <S-L> :bnext<CR>
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
 
 " Python autocomplete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
