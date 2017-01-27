@@ -4,8 +4,6 @@ set runtimepath+=$GOROOT/misc/vim
 set nocompatible
 call plug#begin('~/.vim/plugged')
 
-" My bundles here:
-"
 " Original Github repos:
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'ctrlpvim/ctrlp.vim'
@@ -25,6 +23,7 @@ Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'tpope/vim-vinegar'
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tpope/vim-unimpaired'
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
