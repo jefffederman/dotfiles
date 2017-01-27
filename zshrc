@@ -69,6 +69,7 @@ $prompt_segment" "%s"
 precmd_functions+=('my_prompt')
 
 export NAMELY_DEV_KUBE_CONFIG='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopment/kubeconfig'
+export KUBECONFIG='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopment/kubeconfig'
 
 alias m2='mate'
 alias ls='ls -Ga'
