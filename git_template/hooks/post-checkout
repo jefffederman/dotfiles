@@ -1,4 +1,4 @@
 #!/bin/sh
 # Slightly modified from Tim Pope’s original, see:
 # http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html#comment-2347209899
-.git/hooks/ctags >/dev/null 2>&1 || true &
+.git/hooks/ripper-tags >/dev/null 2>&1 || true &

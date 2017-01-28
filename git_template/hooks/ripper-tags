@@ -1,0 +1,11 @@
+#!/bin/sh
+# Changed from Tim Pope’s original to use ripper-tags, see:
+# http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html#comment-1502773044
+set -e
+# `ripper-tags` is a gem, need it in our path
+PATH="$GEM_PATH:$PATH"
+dir="`git rev-parse --git-dir`"
+trap 'rm -f "$dir/$$.tags"' EXIT
+git ls-files | \
+  ripper-tags -R --tag-relative --exclude=vendor,public -f "$dir/$$.tags"
+  mv "$dir/$$.tags" "$dir/tags"
