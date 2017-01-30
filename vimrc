@@ -154,7 +154,7 @@ nnoremap <F2> :call NumberToggle()<CR>
 au BufRead,BufNewFile *.es6 setfiletype javascript
 
 " Shortcut to turn off search highlighting
-nnoremap <leader>c :nohlsearch<CR>
+nnoremap <CR><CR> :noh<cr>
 
 " Toggle between Solarized dark/light
 function! ToggleSolarized()
