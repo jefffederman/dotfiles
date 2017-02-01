@@ -12,7 +12,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', {'for': 'go'}
@@ -187,4 +186,7 @@ endif
 
 " Neomake
 autocmd! BufWritePost * Neomake
+
+" Strip trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
 
