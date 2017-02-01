@@ -76,6 +76,7 @@ alias ls='ls -Ga'
 alias bx='bundle exec'
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
+  export EDITOR='nvim'
 fi
 # See http://stackoverflow.com/questions/4822471/count-number-of-lines-in-a-git-repository
 alias linesofcode='cloc $(git ls-files)'
