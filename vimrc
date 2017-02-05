@@ -73,8 +73,8 @@ set incsearch
 set showmatch
 set hlsearch
 set autoread
+" Fat fingers
 inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 au FocusLost * :wa
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
@@ -82,8 +82,15 @@ inoremap jj <ESC>
 nnoremap <leader>w <C-w>v<C-w>l
 nmap j gj
 nmap k gk
+
+" Folding
 set foldmethod=indent
 set nofoldenable "Don't fold by default
+" Toggle fold
+nnoremap <F1> za
+" Close all folds
+nnoremap <leader>0 zM
+
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h14
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
