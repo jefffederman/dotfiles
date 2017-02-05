@@ -36,6 +36,9 @@ Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
 Plug 'slashmili/alchemist.vim', {'for': ['elixir', 'eelixir']}
 " Themes
 Plug 'cocopon/iceberg.vim'
+Plug 'morhetz/gruvbox'
+Plug 'noahfrederick/vim-hemisu'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 call deoplete#enable()
@@ -81,16 +84,28 @@ nmap j gj
 nmap k gk
 set foldmethod=indent
 set nofoldenable "Don't fold by default
-"let ruby_foldable_groups = 'def' " Only fold ruby methods; doesn't appear to
-"work :/
-set t_Co=256
-set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h16
+set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h14
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
 set termguicolors
+" Info on solarized8_dark
 " https://github.com/lifepillar/vim-solarized8
-" colorscheme solarized8_dark
-colorscheme iceberg
+colorscheme gruvbox
+set background=dark
+
+function! ToggleBackground()
+  if (g:colors_name =~# "solarized")
+    exe "colors" (g:colors_name =~# "dark"
+          \ ? substitute(g:colors_name, 'dark', 'light', '')
+          \ : substitute(g:colors_name, 'light', 'dark', '')
+          \ )
+  else
+    let &background = ( &background ==? "dark"? "light" : "dark" )
+  endif
+endfunction
+
+nnoremap <F7> :call ToggleBackground()<CR>
+
 let g:sparkupNextMapping = '<c-x>'
 
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -104,11 +119,11 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " vim-test mappings
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+nnoremap <silent> <leader>t :TestNearest<CR>
+nnoremap <silent> <leader>T :TestFile<CR>
+nnoremap <silent> <leader>a :TestSuite<CR>
+nnoremap <silent> <leader>l :TestLast<CR>
+nnoremap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "neovim"
 
 " Window splits
@@ -123,11 +138,11 @@ hi VertSplit ctermbg=NONE guibg=NONE
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-nmap <S-H> :bprev<CR>
-nmap <S-L> :bnext<CR>
+nnoremap <S-H> :bprev<CR>
+nnoremap <S-L> :bnext<CR>
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nmap <leader>bq :bp <BAR> bd #<CR>
+nnoremap <leader>bq :bp <BAR> bd #<CR>
 
 " Python autocomplete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -154,16 +169,6 @@ au BufRead,BufNewFile *.es6 setfiletype javascript
 
 " Shortcut to turn off search highlighting
 nnoremap <CR><CR> :noh<cr>
-
-" Toggle between Solarized dark/light
-function! ToggleSolarized()
-  exe "colors" (g:colors_name =~# "dark"
-        \ ? substitute(g:colors_name, 'dark', 'light', '')
-        \ : substitute(g:colors_name, 'light', 'dark', '')
-        \ )
-endfunction
-
-nnoremap <F7> :call ToggleSolarized()<CR>
 
 " Tags
 nnoremap <c-]> :CtrlPtjump<cr>

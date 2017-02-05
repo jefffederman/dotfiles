@@ -37,7 +37,12 @@ export PATH="$PATH:$HOME/.yarn/bin"
 
 # Me
 export PATH="$PATH:$HOME/bin"
-export EDITOR='vim'
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+  export EDITOR='nvim'
+else
+  export EDITOR='vim'
+fi
 
 setopt prompt_subst
 autoload -U colors && colors
@@ -74,10 +79,6 @@ export KUBECONFIG='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopmen
 alias m2='mate'
 alias ls='ls -Ga'
 alias bx='bundle exec'
-if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
-  export EDITOR='nvim'
-fi
 # See http://stackoverflow.com/questions/4822471/count-number-of-lines-in-a-git-repository
 alias linesofcode='cloc $(git ls-files)'
 alias kdb="kubectl --kubeconfig=$NAMELY_DEV_KUBE_CONFIG --namespace='broadway'"
