@@ -88,6 +88,8 @@ set foldmethod=indent
 set nofoldenable "Don't fold by default
 " Toggle fold
 nnoremap <F1> za
+" Open all child folds recursively
+nnoremap <leader><F1> zO
 " Close all folds
 nnoremap <leader>0 zM
 
