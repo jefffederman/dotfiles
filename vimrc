@@ -31,14 +31,12 @@ Plug 'tpope/vim-bundler', {'for': 'ruby'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
+Plug 'moll/vim-node'
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
 Plug 'slashmili/alchemist.vim', {'for': ['elixir', 'eelixir']}
 " Themes
 Plug 'cocopon/iceberg.vim'
-Plug 'morhetz/gruvbox'
-Plug 'noahfrederick/vim-hemisu'
-Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 call deoplete#enable()
@@ -99,8 +97,7 @@ let g:airline#extensions#tmuxline#enabled = 0
 set termguicolors
 " Info on solarized8_dark
 " https://github.com/lifepillar/vim-solarized8
-colorscheme gruvbox
-set background=dark
+colorscheme iceberg
 
 function! ToggleBackground()
   if (g:colors_name =~# "solarized")
