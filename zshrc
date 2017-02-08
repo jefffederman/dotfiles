@@ -121,4 +121,9 @@ fe() {
 }
 
 # Namely
-export PATH="$PATH:$HOME/Code/namely/node_modules/.bin"
+export PATH="node_modules/.bin:$PATH"
+
+refresh_branch() {
+  git br -D $1;
+  git fetch ${2:-upstream} $1:$1;
+}
