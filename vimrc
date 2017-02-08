@@ -21,7 +21,9 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'tpope/vim-vinegar'
 Plug 'neomake/neomake'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+endif
 Plug 'tpope/vim-unimpaired'
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
@@ -39,7 +41,9 @@ Plug 'slashmili/alchemist.vim', {'for': ['elixir', 'eelixir']}
 Plug 'cocopon/iceberg.vim'
 call plug#end()
 
-call deoplete#enable()
+if has('nvim')
+  call deoplete#enable()
+endif
 syntax on
 filetype indent plugin on
 let mapleader=" "
@@ -130,7 +134,13 @@ nnoremap <silent> <leader>T :TestFile<CR>
 nnoremap <silent> <leader>a :TestSuite<CR>
 nnoremap <silent> <leader>l :TestLast<CR>
 nnoremap <silent> <leader>g :TestVisit<CR>
-let test#strategy = "neovim"
+if has('nvim')
+  let test#strategy = "neovim"
+elseif has('gui_running')
+  let test#strategy = "iterm"
+else
+  let test#strategy = "basic"
+end
 
 " Window splits
 map :sp :split
