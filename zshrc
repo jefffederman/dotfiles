@@ -74,15 +74,14 @@ $prompt_segment" "%s"
 precmd_functions+=('my_prompt')
 
 export NAMELY_DEV_KUBE_CONFIG='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopment/kubeconfig'
-export KUBECONFIG='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopment/kubeconfig'
+export KUBECONFIG=$NAMELY_DEV_KUBE_CONFIG
 
 alias m2='mate'
 alias ls='ls -Ga'
 alias bx='bundle exec'
 # See http://stackoverflow.com/questions/4822471/count-number-of-lines-in-a-git-repository
 alias linesofcode='cloc $(git ls-files)'
-alias kdb="kubectl --kubeconfig=$NAMELY_DEV_KUBE_CONFIG --namespace='broadway'"
-alias kdh="kubectl --kubeconfig=$NAMELY_DEV_KUBE_CONFIG --namespace='default'"
+alias kdh="kubectl --kubeconfig=$KUBECONFIG --namespace='hpac'"
 
 # Docker
 alias cleancontainers='docker rm $(docker ps -aq)'
