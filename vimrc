@@ -84,8 +84,11 @@ au FocusLost * :wa
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 inoremap jj <ESC>
 nnoremap <leader>w <C-w>v<C-w>l
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap k gk
+nnoremap ; :
+" Set // to search the current visual selection
+vnoremap // y/<C-R>"<CR>"
 
 " Folding
 set foldmethod=indent
@@ -213,3 +216,17 @@ autocmd! BufWritePost * Neomake
 " Strip trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
+function! CloseAllBuffersButCurrent()
+  let curr = bufnr("%")
+  let last = bufnr("$")
+
+  if curr > 1    | silent! execute "1,".(curr-1)."bd"     | endif
+  if curr < last | silent! execute (curr+1).",".last."bd" | endif
+endfunction
+
+nnoremap <leader><c-w> :call CloseAllBuffersButCurrent()<CR>
+" json beautifier
+nnoremap <Leader>z :%!jq '.'<CR>
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>:q<cr>
