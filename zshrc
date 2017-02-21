@@ -126,3 +126,40 @@ refresh_branch() {
   git br -D $1;
   git fetch ${2:-upstream} $1:$1;
 }
+
+# Browse chrome history
+fchr() {
+  local cols sep
+  cols=$(( COLUMNS / 3 ))
+  sep='{{::}}'
+
+  # Copy History DB to circumvent the lock
+  # - See http://stackoverflow.com/questions/8936878 for the file path
+  cp -f ~/Library/Application\ Support/Google/Chrome/Default/History /tmp/h
+
+  sqlite3 -separator $sep /tmp/h \
+    "select substr(title, 1, $cols), url
+     from urls order by last_visit_time desc" |
+  awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\n", $1, $2}' |
+  fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs open
+}
+
+# Browse Safari history
+# See also http://2016.padjo.org/tutorials/sqlite-your-browser-history/
+fsaf() {
+  local cols sep
+  cols=$(( COLUMNS / 3 ))
+  sep='{{::}}'
+
+  # Copy History DB to circumvent the lock
+  # - See http://stackoverflow.com/questions/8936878 for the file path
+  cp -f ~/Library/Safari/History.db /tmp/h
+
+  sqlite3 -separator $sep /tmp/h \
+    "select substr(title, 1, $cols), url
+     from history_visits inner join history_items
+     on history_items.id = history_visits.history_item
+     order by visit_time desc" |
+  awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\n", $1, $2}' |
+  fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs open
+}
