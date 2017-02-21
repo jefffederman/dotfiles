@@ -70,6 +70,8 @@ nnoremap / /\v
 vnoremap / /\v
 set ignorecase
 set smartcase
+" Search/replace globally by default
+" Using `/g` flag deactivates replace
 set gdefault
 set incsearch
 set showmatch
