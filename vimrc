@@ -229,4 +229,4 @@ nnoremap <leader><c-w> :call CloseAllBuffersButCurrent()<CR>
 nnoremap <Leader>z :%!jq '.'<CR>
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>:q<cr>
+nnoremap <leader>qv :source $MYVIMRC<cr>:q<cr>
