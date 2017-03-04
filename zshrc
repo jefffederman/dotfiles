@@ -163,3 +163,11 @@ fsaf() {
   awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\n", $1, $2}' |
   fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs open
 }
+
+add_remote() {
+  git remote add $1 \
+    $(ruby -r uri -e 'url = URI.parse(URI.encode(ARGV[0])); \
+    origin_handle = url.path.match(/(\w+)\//)[1]; \
+    puts ARGV[0].gsub(origin_handle, ARGV[1].downcase)' \
+    $(git remote get-url origin) $1)
+}
