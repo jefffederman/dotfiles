@@ -123,8 +123,7 @@ fe() {
 export PATH="node_modules/.bin:$PATH"
 
 refresh_branch() {
-  git br -D $1;
-  git fetch ${2:-upstream} $1:$1;
+  ruby $HOME/Scripts/refresh_branch.rb
 }
 
 # Browse chrome history
