@@ -230,3 +230,14 @@ nnoremap <Leader>z :%!jq '.'<CR>
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>qv :source $MYVIMRC<cr>:q<cr>
+
+" NerdCommenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Directory options
+let g:netrw_liststyle=3 " Tree view
