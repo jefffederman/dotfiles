@@ -5,18 +5,24 @@
 * Xcode
 * Homebrew
 	* git
-	* vim
+	* neovim
 	* PostgreSQL
 	* chruby
 	* ruby-install
 		* Ruby (latest)
 			* Bundler
 			* Rails
+      * Awesome Print
+      * neovim
+      * Ripper Tags
+      * gem-ripper-tags
+      * Rubocop
 	* node
-    	* bower
-    	* browserify
+	* nvm
 	* Python 2 & 3
 		* virtualenv
+    * pipenv
+    * neovim
   * Go
   * The Silver Searcher
   * tree
@@ -30,7 +36,6 @@
 * Mou
 * VirtualBox
 * Cyberduck (App Store)
-* Divvy (App Store)
 * Magnet (App Store)
 * Notational Velocity
 * Crosshairs (App Store)
@@ -39,7 +44,7 @@
 * Firefox
 * Kindle (App Store)
 * AppCleaner
-* Atom
+* 1Password
 
 ## Vim
 
@@ -49,7 +54,6 @@
 
 Taken (mostly) from <http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html>
 
-TODOs
-* Try with ripper-tags (better Ruby support)
+* Use ripper-tags (better Ruby support)
 * Build tags for chruby rubies
 * Build tags for gems on install
