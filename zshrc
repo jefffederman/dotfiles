@@ -74,14 +74,15 @@ $prompt_segment" "%s"
 precmd_functions+=('my_prompt')
 
 export NAMELY_DEV_KUBE_CONFIG='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopment/kubeconfig'
-export KUBECONFIG=$NAMELY_DEV_KUBE_CONFIG
+export TECTONIC_KUBE_CONFIG='/Users/jefffederman/Code/Kubernetes/clusters/Tectonic/kubeconfig'
+export KUBECONFIG=$TECTONIC_KUBE_CONFIG
 
 alias m2='mate'
 alias ls='ls -Ga'
 alias bx='bundle exec'
 # See http://stackoverflow.com/questions/4822471/count-number-of-lines-in-a-git-repository
 alias linesofcode='cloc $(git ls-files)'
-alias kdh="kubectl --kubeconfig=$KUBECONFIG --namespace='hpac'"
+alias kdh="kubectl --kubeconfig=$KUBECONFIG --namespace='hcm'"
 
 # Docker
 alias cleancontainers='docker rm $(docker ps -aq)'
@@ -169,4 +170,8 @@ add_remote() {
     origin_handle = url.path.match(/(\w+)\//)[1]; \
     puts ARGV[0].gsub(origin_handle, ARGV[1].downcase)' \
     $(git remote get-url origin) $1)
+}
+
+delete_pod() {
+  kubectl -n hpac delete pod $1 --now
 }

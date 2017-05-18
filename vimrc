@@ -29,6 +29,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'tpope/vim-bundler', {'for': 'ruby'}
+Plug 'slim-template/vim-slim', {'for': 'slim'}
 " JavaScript
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'pangloss/vim-javascript', {'for': 'javascript'}
@@ -146,6 +147,7 @@ elseif has('gui_running')
 else
   let test#strategy = "basic"
 end
+let test#ruby#rspec#executable = "docker exec -it $(docker ps | ag namely_web | awk '{ print $1 }') rspec"
 
 " Window splits
 map :sp :split
