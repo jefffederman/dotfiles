@@ -21,6 +21,7 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'tpope/vim-vinegar'
 Plug 'neomake/neomake'
+Plug 'rstacruz/vim-closer'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
@@ -243,3 +244,4 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Directory options
 let g:netrw_liststyle=3 " Tree view
+
