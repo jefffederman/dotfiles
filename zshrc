@@ -175,3 +175,8 @@ add_remote() {
 delete_pod() {
   kubectl -n hpac delete pod $1 --now
 }
+
+# namely/namely specific for now
+alias gitwa='git diff --word-diff=porcelain develop | grep -e "^+[^+]" | wc -w | xargs'
+alias gitwd='git diff --word-diff=porcelain develop | grep -e "^-[^-]" | wc -w | xargs'
+alias gitw='echo $(($(gitwa) - $(gitwd)))'
