@@ -73,16 +73,15 @@ $prompt_segment" "%s"
 
 precmd_functions+=('my_prompt')
 
-export NAMELY_DEV_KUBE_CONFIG='/Users/jefffederman/Code/Kubernetes/clusters/NamelyDevelopment/kubeconfig'
 export TECTONIC_KUBE_CONFIG='/Users/jefffederman/Code/Kubernetes/clusters/Tectonic/kubeconfig'
 export KUBECONFIG=$TECTONIC_KUBE_CONFIG
+export TILLER_NAMESPACE=default
 
 alias m2='mate'
 alias ls='ls -Ga'
 alias bx='bundle exec'
 # See http://stackoverflow.com/questions/4822471/count-number-of-lines-in-a-git-repository
 alias linesofcode='cloc $(git ls-files)'
-alias kdh="kubectl --kubeconfig=$KUBECONFIG --namespace='hcm'"
 
 # Docker
 alias cleancontainers='docker rm $(docker ps -aq)'
@@ -122,6 +121,7 @@ fe() {
 
 # Namely
 export PATH="node_modules/.bin:$PATH"
+export PLATFORM=~/Code/platform
 
 refresh_branch() {
   ruby $HOME/Scripts/refresh_branch.rb
