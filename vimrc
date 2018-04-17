@@ -14,7 +14,6 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'janko-m/vim-test'
 Plug 'ivalkeen/vim-ctrlp-tjump'
@@ -35,10 +34,12 @@ Plug 'slim-template/vim-slim', {'for': 'slim'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
-Plug 'moll/vim-node'
 " Elixir
-Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
+Plug 'elixir-editors/vim-elixir', {'for': ['elixir', 'eelixir']}
 Plug 'slashmili/alchemist.vim', {'for': ['elixir', 'eelixir']}
+" Go
+Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 " Themes
 Plug 'cocopon/iceberg.vim'
 call plug#end()
