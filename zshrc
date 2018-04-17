@@ -121,7 +121,8 @@ fe() {
 
 # Namely
 export PATH="node_modules/.bin:$PATH"
-export PLATFORM=~/Code/platform
+# export PLATFORM=~/Code/platform # work
+export PLATFORM=~/Code/NamelyRepos/platform # home
 
 refresh_branch() {
   ruby $HOME/Scripts/refresh_branch.rb
