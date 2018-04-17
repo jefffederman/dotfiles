@@ -17,4 +17,5 @@ fi
 
 # For python virtualenvs
 export WORKON_HOME="$HOME/Code/virtualenvs"
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
