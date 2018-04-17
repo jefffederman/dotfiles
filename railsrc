@@ -4,3 +4,4 @@
 --skip-bundle
 --skip-keeps
 --template=~/rails_template.rb
+--webpack=react
