@@ -110,6 +110,7 @@ set termguicolors
 " Info on solarized8_dark
 " https://github.com/lifepillar/vim-solarized8
 colorscheme iceberg
+" colorscheme solarized8_light
 
 function! ToggleBackground()
   if (g:colors_name =~# "solarized")
