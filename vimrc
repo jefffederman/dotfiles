@@ -176,6 +176,10 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 " Enable Sparkup for .eex files
 autocmd FileType eelixir runtime! ftplugin/html/sparkup.vim
 
+" Run `mix format` on saving Elixir files
+autocmd BufWritePost *.exs silent execute "!mix format <afile>" | redraw!
+autocmd BufWritePost *.ex silent execute "!mix format <afile> >/dev/null 2>&1" | redraw!
+
 " Insert today’s date (human)
 command! Today :normal a<c-r>=strftime('%b %d, %Y')<cr>
 
