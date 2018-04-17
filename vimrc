@@ -149,7 +149,7 @@ elseif has('gui_running')
 else
   let test#strategy = "basic"
 end
-let test#ruby#rspec#executable = "docker exec -it $(docker ps | ag namely_web | awk '{ print $1 }') rspec"
+" let test#ruby#rspec#executable = \"docker exec -it $(docker ps | ag namely_web | awk '{ print $1 }') rspec\"
 
 " Window splits
 map :sp :split
