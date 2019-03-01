@@ -1,4 +1,4 @@
-Pry.config.prompt = Pry::SIMPLE_PROMPT
+Pry.config.prompt = [proc { "> " }, proc { "| " }]
 
 begin
   require 'awesome_print'
