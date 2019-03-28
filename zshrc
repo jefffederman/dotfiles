@@ -35,6 +35,9 @@ export PATH=/usr/local/sbin:$PATH:$GOPATH/bin
 # Yarn
 export PATH="$PATH:$HOME/.yarn/bin"
 
+# Python local bin
+export PATH="$PATH:$HOME/Library/Python/3.6/bin"
+
 # Me
 export PATH="$PATH:$HOME/bin"
 if type nvim > /dev/null 2>&1; then
@@ -88,17 +91,6 @@ alias cleancontainers='docker rm $(docker ps -aq)'
 alias dco="docker-compose"
 function dx() { docker exec -ti $(docker ps -f name=$1 -q) $2 }
 
-docker_running=$(docker-machine ls | grep default)
-if [[ "$docker_running" == *"Stopped"* ]]
-then
-  docker-machine start default
-  eval "$(docker-machine env default)"
-  env | grep "DOCKER_HOST"
-elif [[ "$docker_running" == *"Running"* ]]
-then
-  eval "$(docker-machine env default)"
-fi
-
 ## Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -123,6 +115,8 @@ fe() {
 export PATH="node_modules/.bin:$PATH"
 # export PLATFORM=~/Code/platform # work
 export PLATFORM=~/Code/NamelyRepos/platform # home
+export GITHUB_TOKEN=8101964b09528b0f0317ecafeca9290fbb140c5c
+export HOMEBREW_GITHUB_API_TOKEN=7ead8d067de5b63c8c9ea4a19e456a499c8c7bba
 
 refresh_branch() {
   ruby $HOME/Scripts/refresh_branch.rb

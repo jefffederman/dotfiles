@@ -25,6 +25,7 @@ if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
 Plug 'tpope/vim-unimpaired'
+Plug 'embear/vim-localvimrc'
 " Ruby
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', {'for': 'ruby'}
@@ -150,7 +151,9 @@ elseif has('gui_running')
 else
   let test#strategy = "basic"
 end
+
 " let test#ruby#rspec#executable = \"docker exec -it $(docker ps | ag namely_web | awk '{ print $1 }') rspec\"
+let test#ruby#rspec#executable = "cd $PLATFORM && docker-compose exec platform_hcm rspec"
 
 " Window splits
 map :sp :split
