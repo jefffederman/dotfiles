@@ -115,8 +115,7 @@ fe() {
 export PATH="node_modules/.bin:$PATH"
 # export PLATFORM=~/Code/platform # work
 export PLATFORM=~/Code/NamelyRepos/platform # home
-export GITHUB_TOKEN=8101964b09528b0f0317ecafeca9290fbb140c5c
-export HOMEBREW_GITHUB_API_TOKEN=7ead8d067de5b63c8c9ea4a19e456a499c8c7bba
+source "${HOME}/.env"
 
 refresh_branch() {
   ruby $HOME/Scripts/refresh_branch.rb

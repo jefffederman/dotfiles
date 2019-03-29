@@ -45,3 +45,6 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+
+# General
+.env
