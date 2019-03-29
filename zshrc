@@ -175,3 +175,11 @@ delete_pod() {
 alias gitwa='git diff --word-diff=porcelain develop | grep -e "^+[^+]" | wc -w | xargs'
 alias gitwd='git diff --word-diff=porcelain develop | grep -e "^-[^-]" | wc -w | xargs'
 alias gitw='echo $(($(gitwa) - $(gitwd)))'
+
+# iTerm2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# iTerm2 user vars
+iterm2_print_user_vars() {
+  iterm2_set_user_var rubyVersion $(ruby -v | cut -d' ' -f 1-2)
+  iterm2_set_user_var rubyVersionShort $(ruby -v | cut -d' ' -f 2)
+}
