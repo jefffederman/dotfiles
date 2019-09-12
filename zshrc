@@ -11,7 +11,8 @@ bindkey -M viins 'jj' vi-cmd-mode
 bindkey '^R' history-incremental-search-backward
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/jefffederman/.zshrc'
+# zstyle :compinstall filename '/Users/jefffederman/.zshrc' # personal
+zstyle :compinstall filename '/Users/jeff.federman/.zshrc' # work
 
 autoload -Uz compinit
 compinit
@@ -76,10 +77,6 @@ $prompt_segment" "%s"
 
 precmd_functions+=('my_prompt')
 
-export TECTONIC_KUBE_CONFIG='/Users/jefffederman/Code/Kubernetes/clusters/Tectonic/kubeconfig'
-export KUBECONFIG=$TECTONIC_KUBE_CONFIG
-export TILLER_NAMESPACE=default
-
 alias m2='mate'
 alias ls='ls -Ga'
 alias bx='bundle exec'
@@ -110,12 +107,6 @@ fe() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
-
-# Namely
-export PATH="node_modules/.bin:$PATH"
-# export PLATFORM=~/Code/platform # work
-export PLATFORM=~/Code/NamelyRepos/platform # home
-source "${HOME}/.env"
 
 refresh_branch() {
   ruby $HOME/Scripts/refresh_branch.rb

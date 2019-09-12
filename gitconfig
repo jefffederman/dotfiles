@@ -20,12 +20,14 @@
 	default = simple
 [user]
 	name = Jeff Federman
-	email = jefffederman@gmail.com
+	# email = jefffederman@gmail.com # personal
+	email = jeff.federman@gusto.com # gusto
 [core]
-  excludesfile = /Users/jefffederman/.gitignore
+  # excludesfile = /Users/jefffederman/.gitignore # personal
+  excludesfile = /Users/jeff.federman/.gitignore # gusto
 	editor = nvim
 [heroku]
-	account = personal
+	# account = personal # personal
 [filter "trimWhitespace"]
 	clean = git-stripspace
 [init]

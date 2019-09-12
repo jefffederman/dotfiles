@@ -16,6 +16,6 @@ elif [ -f "/usr/local/opt/chruby/share/chruby/chruby.sh" ]; then
 fi
 
 # For python virtualenvs
-export WORKON_HOME="$HOME/Code/virtualenvs"
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
+# export WORKON_HOME="$HOME/Code/virtualenvs"
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+# source /usr/local/bin/virtualenvwrapper.sh
