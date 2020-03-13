@@ -12,7 +12,7 @@ bindkey '^R' history-incremental-search-backward
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 # zstyle :compinstall filename '/Users/jefffederman/.zshrc' # personal
-zstyle :compinstall filename '/Users/jeff.federman/.zshrc' # work
+zstyle :compinstall filename '/Users/jeff.federman/.zshrc' # Gusto
 
 autoload -Uz compinit
 compinit
@@ -30,14 +30,15 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWCOLORHINTS=true
 
 # Go
-export GOPATH=$HOME/Code/Go
+# export GOPATH=$HOME/Code/Go # personal
+export GOPATH=$HOME/workspace/Go # Gusto
 export PATH=/usr/local/sbin:$PATH:$GOPATH/bin
 
 # Yarn
 export PATH="$PATH:$HOME/.yarn/bin"
 
 # Python local bin
-export PATH="$PATH:$HOME/Library/Python/3.6/bin"
+# export PATH="$PATH:$HOME/Library/Python/3.6/bin"
 
 # Me
 export PATH="$PATH:$HOME/bin"
@@ -161,9 +162,9 @@ delete_pod() {
   kubectl -n hpac delete pod $1 --now
 }
 
-# namely/namely specific for now
-alias gitwa='git diff --word-diff=porcelain develop | grep -e "^+[^+]" | wc -w | xargs'
-alias gitwd='git diff --word-diff=porcelain develop | grep -e "^-[^-]" | wc -w | xargs'
+# Gusto/zenpayroll specific for now
+alias gitwa='git diff --word-diff=porcelain development | grep -e "^+[^+]" | wc -w | xargs'
+alias gitwd='git diff --word-diff=porcelain development | grep -e "^-[^-]" | wc -w | xargs'
 alias gitw='echo $(($(gitwa) - $(gitwd)))'
 
 # iTerm2 shell integration
@@ -172,4 +173,11 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 iterm2_print_user_vars() {
   iterm2_set_user_var rubyVersion $(ruby -v | cut -d' ' -f 1-2)
   iterm2_set_user_var rubyVersionShort $(ruby -v | cut -d' ' -f 2)
+}
+
+# Gusto
+# export PATH="/usr/local/opt/node@10/bin:$PATH"
+
+zp_refresh() {
+  git pull && bundle && yarn install && bin/rails db:migrate
 }
