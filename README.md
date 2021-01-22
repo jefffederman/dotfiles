@@ -21,7 +21,7 @@
 	* Python 2 & 3
 		* virtualenv
     * pipenv
-    * neovim
+    * neovim (optional)
   * Go
   * The Silver Searcher (or ripgrep)
   * tree
