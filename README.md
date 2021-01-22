@@ -26,7 +26,6 @@
   * The Silver Searcher (or ripgrep)
   * tree
   * wget
-  * zsh
   * openssl
       * brew link --force openssl
   * elixir (optional)
