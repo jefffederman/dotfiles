@@ -5,41 +5,42 @@
 * Xcode
 * Homebrew
 	* git
-	* PostgreSQL
-	* chruby
-	* ruby-install
-		* Ruby (latest)
-			* Bundler
-			* Rails
+	* ruby-build
+    * neovim (optional)
+  * ripgrep
+  * tree
+  * wget
+  * openssl
+* asdf
+	* Ruby (latest)
+	  * Rails
       * Awesome Print
       * neovim (optional)
       * Ripper Tags (optional)
       * gem-ripper-tags (optional)
       * Rubocop
-	* node
-	* nvm
-	* Python 2 & 3
-		* virtualenv
-    * pipenv
-    * neovim (optional)
-  * Go
-  * The Silver Searcher (or ripgrep)
-  * tree
-  * wget
-  * openssl
-      * brew link --force openssl
-  * elixir (optional)
+    * Python
+	  * pipenv
+	  * virtualenv
+	* Postgres
+	* Node
+	* Go
+	* Elixir
 * Textmate 2
+	* Strip trailing whitespace
+	* Add newline to EOF
 * iTerm2
 * Magnet (App Store)
-* FS Notes
+* FS Notes (App Store)
 * Crosshairs (App Store) (optional)
-* Dropbox
+* Dropbox (from dropbox.com)
 * Chrome
 * Firefox
 * Kindle (App Store)
 * AppCleaner
 * 1Password
+* Fonts (from Dropbox)
+	* Run script to only use OpenType
 
 ## Vim
 
