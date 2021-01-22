@@ -5,7 +5,6 @@
 * Xcode
 * Homebrew
 	* git
-	* neovim
 	* PostgreSQL
 	* chruby
 	* ruby-install
@@ -13,9 +12,9 @@
 			* Bundler
 			* Rails
       * Awesome Print
-      * neovim
-      * Ripper Tags
-      * gem-ripper-tags
+      * neovim (optional)
+      * Ripper Tags (optional)
+      * gem-ripper-tags (optional)
       * Rubocop
 	* node
 	* nvm
@@ -24,21 +23,18 @@
     * pipenv
     * neovim
   * Go
-  * The Silver Searcher
+  * The Silver Searcher (or ripgrep)
   * tree
   * wget
   * zsh
   * openssl
       * brew link --force openssl
-  * elixir
+  * elixir (optional)
 * Textmate 2
 * iTerm2
-* Mou
-* VirtualBox
-* Cyberduck (App Store)
 * Magnet (App Store)
-* Notational Velocity
-* Crosshairs (App Store)
+* FS Notes
+* Crosshairs (App Store) (optional)
 * Dropbox
 * Chrome
 * Firefox
